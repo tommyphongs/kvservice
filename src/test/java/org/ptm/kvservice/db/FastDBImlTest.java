@@ -17,6 +17,8 @@ class FastDBImlTest {
     static {
         PropertyConfigurator.configure("src/main/resources/lo4j.properties");
     }
+
+    private static final  Random random = new Random();
     private static final Logger LOGGER = LoggerFactory.getLogger(FastDBIml.class);
 
     private static final String KEY_TEST = "key1";
@@ -26,28 +28,26 @@ class FastDBImlTest {
         PropertyConfigurator.configure("src/main/resources/lo4j.properties");
         try (FastDB fastDB = FastDB.createFastDB(new FastDBIml.Options()
                 .setDirName(System.getenv("FASTDB_DIR")))) {
-            Random random = new Random();
             List<JsonPrimitive> data = new ArrayList<>();
             random.longs(1999).boxed().forEach(l -> data.add(new JsonPrimitive(l)));
             KeyValuesObj obj = new KeyValuesObj(KEY_TEST, data, DataTypes.LONG_TYPE_STR);
             fastDB.listInsert(obj);
-            int currentSize = 1801;
-            int sizePush = 302;
-            LOGGER.info("kdfjdlfj");
+
         }
 
     }
 
-//    @Test
-//    public void test2PushFront() throws Exception {
-//        try (FastDB fastDB = FastDB.createFastDB(new FastDBIml.Options()
-//                .setDirName(System.getenv("LISTDB_DIR")))) {
-//            fastDB.listDelete(KEY_TEST.getBytes());
-//            Random random = new Random();
-//            fastDB.listAppend(KEY_TEST.getBytes(), random.longs(1999).boxed().collect(Collectors.toList()));
-//            System.out.println(fastDB.listGet(KEY_TEST.getBytes(), 10000).size());
-//        }
-//    }
+    @Test
+    public void test2PushFront() throws Exception {
+        try (FastDB fastDB = FastDB.createFastDB(new FastDBIml.Options()
+                .setDirName(System.getenv("LISTDB_DIR")))) {
+            fastDB.listDelete(KEY_TEST);
+            List<JsonPrimitive> data = new ArrayList<>();
+            random.longs(1999).boxed().forEach(l -> data.add(new JsonPrimitive(l)));
+            KeyValuesObj obj = new KeyValuesObj(KEY_TEST, data, DataTypes.LONG_TYPE_STR);
+            fastDB.listInsert(obj);
+        }
+    }
 
 //    @Test
 //    public void test3DeleteKey() throws Exception {
