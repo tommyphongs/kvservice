@@ -1,0 +1,77 @@
+# HELP sys_memory  
+# TYPE sys_memory gauge
+sys_memory 25.0
+# HELP m__metrics_seconds  
+# TYPE m__metrics_seconds summary
+m__metrics_seconds_count 0.0
+m__metrics_seconds_sum 0.0
+# HELP m__metrics_seconds_max  
+# TYPE m__metrics_seconds_max gauge
+m__metrics_seconds_max 0.0
+# HELP total_memory  
+# TYPE total_memory gauge
+total_memory 0.845703125
+# HELP free_memory  
+# TYPE free_memory gauge
+free_memory 0.5460758209228516
+# HELP keys_seconds_max  
+# TYPE keys_seconds_max gauge
+keys_seconds_max 0.0
+# HELP keys_seconds  
+# TYPE keys_seconds summary
+keys_seconds_count 0.0
+keys_seconds_sum 0.0
+# HELP disk_usage  
+# TYPE disk_usage gauge
+disk_usage 7390.141162872314
+# HELP list_delete_seconds  
+# TYPE list_delete_seconds summary
+list_delete_seconds_count 0.0
+list_delete_seconds_sum 0.0
+# HELP list_delete_seconds_max  
+# TYPE list_delete_seconds_max gauge
+list_delete_seconds_max 0.0
+# HELP nkeys_seconds_max  
+# TYPE nkeys_seconds_max gauge
+nkeys_seconds_max 0.0
+# HELP nkeys_seconds  
+# TYPE nkeys_seconds summary
+nkeys_seconds_count 0.0
+nkeys_seconds_sum 0.0
+# HELP list_tailpeek_seconds_max  
+# TYPE list_tailpeek_seconds_max gauge
+list_tailpeek_seconds_max 0.0
+# HELP list_tailpeek_seconds  
+# TYPE list_tailpeek_seconds summary
+list_tailpeek_seconds_count 0.0
+list_tailpeek_seconds_sum 0.0
+# HELP list_insert_seconds  
+# TYPE list_insert_seconds summary
+list_insert_seconds_count 0.0
+list_insert_seconds_sum 0.0
+# HELP list_insert_seconds_max  
+# TYPE list_insert_seconds_max gauge
+list_insert_seconds_max 0.0
+# HELP m__admin_clear_seconds  
+# TYPE m__admin_clear_seconds summary
+m__admin_clear_seconds_count 0.0
+m__admin_clear_seconds_sum 0.0
+# HELP m__admin_clear_seconds_max  
+# TYPE m__admin_clear_seconds_max gauge
+m__admin_clear_seconds_max 0.0
+# HELP max_memory  
+# TYPE max_memory gauge
+max_memory 6.25
+# HELP total_key  
+# TYPE total_key gauge
+total_key 532281.0
+# HELP available_processors  
+# TYPE available_processors gauge
+available_processors 8.0
+# HELP list_headpeek_seconds_max  
+# TYPE list_headpeek_seconds_max gauge
+list_headpeek_seconds_max 0.0
+# HELP list_headpeek_seconds  
+# TYPE list_headpeek_seconds summary
+list_headpeek_seconds_count 0.0
+list_headpeek_seconds_sum 0.0

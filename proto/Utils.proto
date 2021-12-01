@@ -1,0 +1,24 @@
+syntax = "proto3";
+package proto;
+
+option java_package = "com.coccoc.bi.kvservice.proto";
+
+message Ints {
+    repeated int32  array = 1;
+}
+
+message Longs {
+    repeated int64 array = 1;
+}
+
+message Doubles {
+    repeated double array = 1;
+}
+
+message Booleans {
+    repeated bool array = 1;
+}
+
+message Strings {
+    repeated string array = 1;
+}

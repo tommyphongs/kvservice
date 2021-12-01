@@ -1,0 +1,64 @@
+POST http://{{host}}:{{port}}/api/list/headpeek
+Content-Type: application/json
+
+{
+  "keys": ["VIDEORS:USER:TIME:CLICK:9990066664064681719"],
+  "size": 2000
+}
+
+###
+
+GET http://{{host}}:{{port}}/api/list/headpeek
+Content-Type: application/json
+
+{
+  "keys": ["test1"],
+  "size": 1000
+}
+
+###
+
+POST http://{{host}}:{{port}}/api/list/tailpeek
+Content-Type: application/json
+
+{
+  "keys": ["test1"],
+  "size": 1
+}
+
+###
+
+GET http://{{host}}:{{port}}/api/list/tailpeek
+Content-Type: application/json
+
+{
+  "keys": ["test2"],
+  "size": 1
+}
+
+###
+POST http://{{host}}:{{port}}/api/list/insert
+Content-Type: application/json
+
+{
+  "key": "test2",
+  "type": "long",
+  "values": [1, 2, 3, 4]
+}
+
+
+###
+
+DELETE http://{{host}}:{{port}}/api/list/delete?key=test2
+
+###
+
+POST http://{{host}}:{{port}}/api/nkeys?wildcard=*
+Content-Type: application/json
+
+###
+
+POST http://{{host}}:{{port}}/api/keys?wildcard=*
+Content-Type: application/json
+
+
